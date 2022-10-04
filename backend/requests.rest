@@ -1,0 +1,26 @@
+### Get Products
+GET http://localhost:3003/products
+
+### Get Product By Id
+GET http://localhost:3003/products/1
+
+### Create an order
+POST http://localhost:3003/orders
+Content-Type: application/json
+
+{
+    "userName": "fulano",
+    "deliveryDate": "2022-10-05",
+    "products": [
+        {
+            "id": 16,
+            "quantity": 2
+        },
+        {
+            "id": 18,
+            "quantity": 1
+        }
+
+    ]
+}
+
