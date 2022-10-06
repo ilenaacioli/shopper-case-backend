@@ -19,4 +19,14 @@ export class ProductDatabase extends BaseDatabase {
 
         return result[0]
     }
+
+    public updateStockOfProduct = async (id:number, newQuantity: number) => {
+        await BaseDatabase.connection(ProductDatabase.TABLE_PRODUCTS)
+        .update({
+            qty_stock: newQuantity
+        })
+        .where({
+            id
+        })
+    }
 }

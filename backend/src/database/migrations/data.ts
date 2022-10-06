@@ -1,5 +1,16 @@
 import { IOrderDB, IOrderItemsDB } from "../../models/Order"
 import { IProductDB } from "../../models/Product"
+import { IUserDB, USER_ROLES } from "../../models/User"
+
+export const users: IUserDB[] = [
+  {
+      id: "1",
+      name: "user_admin",
+      email: "user_admin@gmail.com",
+      password: "$2a$12$PULtVNlAll87D6E8pR/0HO9vbzVDPaUMA89rc5cNmYoAAepbwmkcO", // qwerty00
+      role: USER_ROLES.ADMIN
+  }
+]
 
 export const products: IProductDB[] = [
     {
@@ -308,7 +319,7 @@ export const orders : IOrderDB[] = [
   {
     id: "sd7yc4jx8xowkufckocemr489r",
     user_name: "joão",
-    delivery_date: new Date("2022-10-05"),
+    delivery_date: "2022-10-05",
     total_price_order: 15.49
   }
 ]
