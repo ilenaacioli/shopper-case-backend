@@ -4,7 +4,7 @@ export class OrderDatabase extends BaseDatabase {
     public static TABLE_ORDERS = "shopper_orders"
     public static TABLE_ORDER_ITEMS = "shopper_order_items"
 
-    public insertOrder = async (id: string, userName: string, deliveryDate: Date) => {
+    public insertOrder = async (id: string, userName: string, deliveryDate: string) => {
 
         await BaseDatabase.connection(OrderDatabase.TABLE_ORDERS)
             .insert({

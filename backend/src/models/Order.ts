@@ -1,7 +1,7 @@
 export interface IOrderDB {
     id: string,
     user_name: string,
-    delivery_date: Date,
+    delivery_date: string,
     total_price_order: number
 }
 

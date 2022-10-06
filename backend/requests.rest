@@ -9,12 +9,12 @@ POST http://localhost:3003/orders
 Content-Type: application/json
 
 {
-    "userName": "fulano",
+    "userName": "teste novo mais uma vez",
     "deliveryDate": "2022-10-05",
     "products": [
         {
             "id": 16,
-            "quantity": 2
+            "quantity": 1
         },
         {
             "id": 18,
@@ -24,3 +24,11 @@ Content-Type: application/json
     ]
 }
 
+### Admin Login
+POST http://localhost:3003/users/adminLogin
+Content-Type: application/json
+
+{
+    "email": "user_admin@gmail.com",
+    "password": "qwerty00"
+}
