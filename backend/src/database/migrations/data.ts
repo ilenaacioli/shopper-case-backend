@@ -9,7 +9,14 @@ export const users: IUserDB[] = [
       email: "user_admin@gmail.com",
       password: "$2a$12$PULtVNlAll87D6E8pR/0HO9vbzVDPaUMA89rc5cNmYoAAepbwmkcO", // qwerty00
       role: USER_ROLES.ADMIN
-  }
+  },
+  {
+    id: "2",
+    name: "user_normal",
+    email: "user_normal@gmail.com",
+    password: "$2a$12$LkWMqS3oPhP2iVMcZOVvWer9ahUPulxjB0EA4TWPxWaRuEEfYGu/i", // asdfg123
+    role: USER_ROLES.NORMAL
+}
 ]
 
 export const products: IProductDB[] = [

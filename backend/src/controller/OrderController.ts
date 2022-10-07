@@ -1,15 +1,16 @@
 import { Request, Response } from "express"
 import { OrderBusiness } from "../business/OrderBusiness"
 import { BaseError } from "../errors/BaseError"
+import { ICreateOrderInputDTO } from "../models/Order"
 
 export class OrderController {
     constructor(
         private orderBusiness: OrderBusiness
     ) {}
 
-    public createAnOrder = async (req: Request, res: Response) =>{
+    public createAnOrder = async (req: Request, res: Response)=>{
         try {
-            const input ={
+            const input: ICreateOrderInputDTO ={
                 products : req.body.products,
                 userName: req.body.userName,
                 deliveryDate: req.body.deliveryDate
