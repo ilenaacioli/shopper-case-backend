@@ -8,8 +8,7 @@ export const productRouter = Router()
 
 const productController = new ProductController(
     new ProductBusiness(
-        new ProductDatabase(),
-        new IdGenerator()
+        new ProductDatabase()
     )
 )
 

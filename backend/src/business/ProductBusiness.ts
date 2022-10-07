@@ -5,8 +5,7 @@ import { IdGenerator } from "../services/IdGenerator"
 
 export class ProductBusiness {
     constructor(
-        private productsDatabase: ProductDatabase,
-        private idGenerator: IdGenerator
+        private productsDatabase: ProductDatabase
     ) {}
 
     public getProducts = async () =>{

@@ -1,5 +1,6 @@
 export enum USER_ROLES {
-    ADMIN = "ADMIN"
+    ADMIN = "ADMIN",
+    NORMAL = "NORMAL"
 }
 
 export interface IUserDB {

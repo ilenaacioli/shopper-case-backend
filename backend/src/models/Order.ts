@@ -12,3 +12,13 @@ export interface IOrderItemsDB {
     quantity: number,
     total_price_item: number
 }
+
+export interface ICreateOrderInputDTO {
+    userName:string,
+    deliveryDate: string,
+    products: {
+        id: number,
+        quantity: number
+    }[],
+
+}

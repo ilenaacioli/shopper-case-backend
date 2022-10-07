@@ -1,5 +1,7 @@
 import { UserDatabase } from "../database/UserDatabase"
 import { AuthorizationError } from "../errors/AuthorizationError"
+import { NotFoundError } from "../errors/NotFoundError"
+import { ParamsError } from "../errors/ParamsError"
 import { ILoginInputDTO, User, USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
@@ -19,17 +21,17 @@ export class UserBusiness {
 
         
         if (!email || typeof email !== "string" || !email.includes('@')) {
-            throw new Error("Parâmetro 'email' inválido")
+            throw new ParamsError("Parâmetro 'email' inválido")
         }
         
         if (!password || typeof password !== "string" || password.length < 6) {
-            throw new Error("Parâmetro 'senha' inválido")
+            throw new ParamsError("Parâmetro 'senha' inválido")
         }
         
         const userDB = await this.userDatabase.selectUserByEmail(email)
         
         if (!userDB) {
-            throw new Error("E-mail não cadastrado")
+            throw new NotFoundError("E-mail não cadastrado")
         }
         
         const user = new User(

@@ -9,8 +9,8 @@ POST http://localhost:3003/orders
 Content-Type: application/json
 
 {
-    "userName": "teste novo mais uma vez",
-    "deliveryDate": "2022-10-05",
+    "userName": "teste dia 2",
+    "deliveryDate": "2022-10-08",
     "products": [
         {
             "id": 16,
