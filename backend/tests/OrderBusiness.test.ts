@@ -17,7 +17,7 @@ describe("Testando a OrderBusiness", () => {
     test("Uma mensagem de pedido concluido é retornada", async () => {
         const input: ICreateOrderInputDTO = {
             userName: "usuário teste",
-            deliveryDate: "2022-10-08",
+            deliveryDate: "2022-10-10",
             products: [
                 {
                     "id": 16,
@@ -108,7 +108,7 @@ describe("Testando a OrderBusiness", () => {
         try {
             const input: ICreateOrderInputDTO = {
                 userName: "usuário teste",
-                deliveryDate: "2022-10-08",
+                deliveryDate: "2022-10-10",
                 products: [
                     {
                         "id": 16,
