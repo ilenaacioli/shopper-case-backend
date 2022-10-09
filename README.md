@@ -55,3 +55,11 @@ BCRYPT_SALT_ROUNDS = 12
 
 ### Link do Postman
 https://documenter.getpostman.com/view/21552877/2s83ziN3Zu
+
+---
+
+### Coverage
+
+![image](https://user-images.githubusercontent.com/104631728/194767264-0540a76f-9959-48bf-9f0b-322ba950b01c.png)
+
+
