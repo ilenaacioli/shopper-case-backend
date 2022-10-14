@@ -1,3 +1,4 @@
+import { IProductDB } from "../models/Product";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class ProductDatabase extends BaseDatabase {
@@ -27,6 +28,18 @@ export class ProductDatabase extends BaseDatabase {
         })
         .where({
             id
+        })
+    }
+
+    public updateProductInfo = async (product: IProductDB) => {
+        await BaseDatabase.connection(ProductDatabase.TABLE_PRODUCTS)
+        .update({
+            name: product.name,
+            price: product.price,
+            qty_stock: product.qty_stock
+        })
+        .where({
+            id: product.id,
         })
     }
 }

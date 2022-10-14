@@ -32,3 +32,15 @@ Content-Type: application/json
     "email": "user_admin@gmail.com",
     "password": "qwerty00"
 }
+
+### Edit Product
+PUT http://localhost:3003/products/editProduct
+Content-Type: application/json
+
+ {
+    "id": 16,
+    "name": "novo nome do produto",
+    "qty_stock": 1,
+    "price": 2.13
+
+}
