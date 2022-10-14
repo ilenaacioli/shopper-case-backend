@@ -23,7 +23,7 @@ export const products: IProductDB[] = [
   {
     id: 1,
     name: "PRODUTO TESTE",
-    price: 10,
+    price: 10.00,
     qty_stock: 0
   },
   {
