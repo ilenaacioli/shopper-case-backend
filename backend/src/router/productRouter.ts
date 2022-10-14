@@ -12,7 +12,6 @@ const productController = new ProductController(
     )
 )
 
-
 productRouter.get("/", productController.getProducts)
-productRouter.get("/", productController.getProducts)
+productRouter.put("/editProduct", productController.editProduct)
 productRouter.get("/:id", productController.getProductById)

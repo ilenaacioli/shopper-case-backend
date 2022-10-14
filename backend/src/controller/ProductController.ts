@@ -5,9 +5,9 @@ import { BaseError } from "../errors/BaseError"
 export class ProductController {
     constructor(
         private productBusiness: ProductBusiness
-    ) {}
+    ) { }
 
-    public getProducts = async (req: Request, res: Response) =>{
+    public getProducts = async (req: Request, res: Response) => {
         try {
 
             const response = await this.productBusiness.getProducts()
@@ -21,11 +21,31 @@ export class ProductController {
         }
     }
 
-    public getProductById = async (req: Request, res: Response) =>{
+    public getProductById = async (req: Request, res: Response) => {
         try {
-            const input = { id : req.params.id }
+            const input = { id: req.params.id }
 
             const response = await this.productBusiness.getProductById(input)
+            res.status(200).send(response)
+
+        } catch (error) {
+            if (error instanceof BaseError) {
+                return res.status(error.statusCode).send({ message: error.message })
+            }
+            res.status(500).send({ message: "Erro inesperado" })
+        }
+    }
+
+    public editProduct = async (req: Request, res: Response) => {
+        try {
+            const input = {
+                id: req.body.id,
+                name: req.body.name,
+                price: req.body.price,
+                qty_stock: req.body.qty_stock
+            }
+
+            const response = await this.productBusiness.editProduct(input)
             res.status(200).send(response)
 
         } catch (error) {

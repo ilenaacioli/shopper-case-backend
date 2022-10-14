@@ -5,9 +5,6 @@ import {AuthenticatorMock} from "./mocks/AuthenticatorMock"
 import { ILoginInputDTO } from '../src/models/User'
 import { BaseError } from '../src/errors/BaseError'
 
-
-
-
 describe("Testando a OrderBusiness", () => {
     const userBusiness = new UserBusiness(
         new UserDatabaseMock(),

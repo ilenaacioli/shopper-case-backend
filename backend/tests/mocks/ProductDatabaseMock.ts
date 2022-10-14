@@ -51,4 +51,7 @@ export class ProductDatabaseMock extends BaseDatabase {
 
     public updateStockOfProduct = async (id: number, newQuantity: number): Promise<void>=> {
     }
+
+    public updateProductInfo = async (product: IProductDB) => {
+    }
 }
