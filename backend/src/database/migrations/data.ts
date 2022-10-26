@@ -27,6 +27,12 @@ export const products: IProductDB[] = [
     qty_stock: 0
   },
   {
+    id: 2,
+    name: "PRODUTO TESTE 2",
+    price: 10.99,
+    qty_stock: 1
+  },
+  {
     id: 16,
     name: "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",
     price: 20.49,
