@@ -60,6 +60,7 @@ https://documenter.getpostman.com/view/21552877/2s83ziN3Zu
 
 ### Coverage
 
-![image](https://user-images.githubusercontent.com/104631728/194767264-0540a76f-9959-48bf-9f0b-322ba950b01c.png)
+![image](https://user-images.githubusercontent.com/104631728/195921869-1cfcaad7-6ede-4f00-b3be-848330abbd04.png)
+
 
 
